@@ -1,30 +1,31 @@
 import { useState } from "react";
 
 const App = () => {
-	//Make a Reactive 'variable' using the React hook 'useState'
-	//That will maintain the value through re-renders
-
-	// Remember: useState is a function that returns a variable
-	// that represents state, and a function that updates the state.
-	//    'answer' == The name that we gave the variable that holds state
-	//    'setAnswer' == The name that we gave the function that updates the state
+	//Create state by calling the React hook 'useState'
+	//Remember, this will maintain value through re-renders
+	//    Hint: useState is a function from react that returns 2 values..
 
 	const [response, setResponse] = useState(false);
 
-	//Make functions to add or remove
 	const handleClick = () => {
-		count === 8 && setAnswer(true);
+		//Here, we should check to see if the user's
+		//count is equal to the count of sheep on the image
 	};
 
 	return (
 		<div>
-			{/* Do what is needed to add the image to the "img" tag */}
-			<img alt='The Sheeps' />
+			<img alt='Sheeps' src={"/sheeps.jpg"} />
 			<br />
 			<h1>Enter the right amount of sheeps and check your answer</h1>
-			{/* Method calls can be used like this "{method}" or "{method()}" which one should be used here?*/}
-			{/* Add some buttons to handle a user adding a sheep and removing a sheep */}
+			{/* Add buttons to handle a user adding and removing sheep 
 
+          Hint: HTML tags have a property called "onClick" that can be used to handle a click event
+          We use this property as follows: 
+              `onClick={() => {}}` or,
+            we can pass in reference to a function like so
+              `onClick={function}` or 
+              `onClick={() => function()}`
+      */}
 			<div>Sheep count: </div>
 			<br />
 			<button onClick={handleClick}>Check Answer</button>
